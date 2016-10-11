@@ -16,7 +16,7 @@ resources:
       skip_cert_check: true
 
 jobs:
-- name: build-maven
+- name: build-and-deploy
   plan:
   - aggregate:
     - get: source-code
