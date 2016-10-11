@@ -5,9 +5,17 @@ resources:
     source:
       uri: https://github.com/cah-jeremykuhn/springboot-sample-pcf.git
       branch: master
+  - name: deploy-pcf
+  type: cf
+  source:
+    api: {{cf-api}}
+    username: {{cf-username}}
+    password: {{cf-password}}
+    organization: {{cf-organization}}
+    space: {{cf-space}}
+    skip_cert_check: true
 
 jobs:
-
 - name: build-maven
   plan:
   - aggregate:
@@ -16,3 +24,12 @@ jobs:
   - task: build
     file: source-code/ci/Tasks/build.yml
 - name: deploy
+  plan: 
+  - aggregate:
+    - get: build-output
+      passed: [ build-maven ]
+      trigger: true
+    - put: deploy-pcf
+      params: 
+        manifest: source-code/manifest.yml
+        path: source-code
