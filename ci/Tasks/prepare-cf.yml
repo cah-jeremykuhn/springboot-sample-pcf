@@ -1,0 +1,33 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: patrickcrocker/cloudfoundry-cli
+    tag: 'latest'
+
+inputs:
+- name: pipeline
+
+outputs:
+- name: itest
+
+params:
+  CF_API_URL:
+  CF_SKIP_SSL:
+  CF_USERNAME:
+  CF_PASSWORD:
+  CF_ORG:
+  CF_SPACE:
+  CF_DB_SERVICE:
+  CF_CONFIG_SERVER_URI:
+  CF_CONFIG_SERVER_LABEL:
+  DB_HOST:
+  DB_PORT:
+  DB_USER:
+  DB_PASSWORD:
+  DB_NAME:
+
+run:
+  path: pipeline/ci/scripts/prepare-cf.sh

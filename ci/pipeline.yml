@@ -1,0 +1,21 @@
+---
+resources:
+  - name: source-code
+    type: git
+    source:
+      uri: https://github.com/spilth/concourse-maven-spring-boot.git
+      branch: master
+  - name: pipeline
+  - name: project
+
+jobs:
+
+- name: build-maven
+  plan:
+  - aggregate:
+    - get: source-code
+      trigger: true
+  - task: build
+    file: pipeline/ci/tasks/build.yml
+  - put: service-snapshot
+    params: { file: target/samplepcfdeploy-*.jar }
