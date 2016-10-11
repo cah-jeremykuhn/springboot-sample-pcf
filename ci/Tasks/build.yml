@@ -12,9 +12,8 @@ inputs:
 
 outputs:
 - name: build-output
+  path: source-code/target
 
 run:
   path: mvn
   args: ["-f", "-e", "source-code/pom.xml", "package"]
-  path: mv
-  args: ["source-code/target/*.jar","build-output/."]
