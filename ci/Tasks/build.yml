@@ -15,4 +15,4 @@ outputs:
   path: build-output
 
 run:
-  path: source-code/ci/scripts/build.sh
+  path: source-code/ci/Scripts/build.sh
