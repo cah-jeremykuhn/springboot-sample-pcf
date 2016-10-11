@@ -14,6 +14,8 @@ resources:
       organization: {{cf-organization}}
       space: {{cf-space}}
       skip_cert_check: true
+  - name: repository
+    type: 
 
 jobs:
 - name: build-maven
@@ -23,13 +25,7 @@ jobs:
       trigger: true
   - task: build
     file: source-code/ci/Tasks/build.yml
-- name: deploy
-  plan: 
-  - aggregate:
-    - get: build-maven
-      passed: [ build-maven ]
-      trigger: true
-    - put: deploy-pcf
-      params: 
-        manifest: source-code/manifest.yml
-        path: source-code
+  - put: deploy-pcf
+    params:
+      manifest: source-code/manifest.yml
+      path: source-code
