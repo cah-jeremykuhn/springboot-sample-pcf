@@ -1,0 +1,9 @@
+
+---
+applications:
+- name: sample-pcf-deploy
+  memory: 128M
+  instances: 1
+  host: samplepcfdeploy
+  command: java -jar something
+  buildpack: java_buildpack
