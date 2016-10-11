@@ -15,3 +15,5 @@ jobs:
       trigger: true
   - task: build
     file: source-code/ci/Tasks/build.yml
+  - task: movefile
+    file: source-code/ci/Tasks/movefile.yml
