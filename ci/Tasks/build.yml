@@ -15,5 +15,4 @@ outputs:
   path: build-output
 
 run:
-  path: mvn
-  args: ["-f", "source-code/pom.xml", "install" , "-Ddir=/build-output"]
+  path: source-code/ci/scripts/build.sh

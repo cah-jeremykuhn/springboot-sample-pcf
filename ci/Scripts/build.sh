@@ -3,11 +3,6 @@
 
 set -e
 
-git clone 
-cd 
-pushd project
-  mvn clean install
-popd
+mvn -f source-code/pom.xml install
 
-#ls -l project/build/libs/*
-#cp project/spring-boot-pcf-app/build/libs/*.jar build-output/.
+cp source-code/target/*.jar build-output/.
