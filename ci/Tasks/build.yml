@@ -10,9 +10,9 @@ image_resource:
 inputs:
 - name: source-code
 
-#outputs:
-#- name: build-output
-#  path: source-code/target
+outputs:
+- name: build-output
+  path: source-code/target
 
 run:
   path: mvn
