@@ -26,4 +26,4 @@ jobs:
   - put: deploy-pcf
     params:
       manifest: source-code/manifest.yml
-      path: source-code
+      path: build-output

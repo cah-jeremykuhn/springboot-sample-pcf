@@ -16,4 +16,4 @@ outputs:
 
 run:
   path: mvn
-  args: ["-f", "source-code/pom.xml", "package"]
+  args: ["-f", "source-code/pom.xml", "install"]
