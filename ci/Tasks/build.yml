@@ -17,4 +17,4 @@ run:
   path: mvn
   args: ["-f", "-e", "source-code/pom.xml", "package"]
   path: mv
-  args: ["SamplePCFDeploy/target/samplepcfdeploy-*.jar","build-output/."]
+  args: ["source-code/target/*.jar","build-output/."]
