@@ -16,4 +16,4 @@ outputs:
 
 run:
   path: mvn
-  args: ["-f", "source-code/pom.xml", "install" , "-Ddir=/tmp/build/put/build-output"]
+  args: ["-f", "source-code/pom.xml", "install" , "-Ddir=/build-output"]
