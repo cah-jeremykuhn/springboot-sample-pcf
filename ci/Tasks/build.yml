@@ -12,8 +12,8 @@ inputs:
 
 outputs:
 - name: build-output
-  path: target/
+  path: build-output
 
 run:
   path: mvn
-  args: ["-f", "source-code/pom.xml", "install"]
+  args: ["-f", "source-code/pom.xml", "install" , "-Ddir=/tmp/build/put/build-output"]
