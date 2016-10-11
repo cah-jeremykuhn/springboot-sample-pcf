@@ -14,8 +14,6 @@ resources:
       organization: {{cf-organization}}
       space: {{cf-space}}
       skip_cert_check: true
-  - name: repository
-    type: 
 
 jobs:
 - name: build-maven
