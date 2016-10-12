@@ -6,4 +6,10 @@ applications:
   instances: 1
   host: samplepcfdeployment
   buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  env:
+   JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
+   JBP_CONFIG_CONTAINER_CERTIFICATE_TRUST_STORE: '{enabled: true}'
+   JBP_CONFIG_JAVA_MAIN: '{arguments: "-server.port=80"}'
+   JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.8.0_101 }}'
+   SPRING_PROFILES_ACTIVE: cloud
   path: build-output/samplepcfdeploy-0.0.1-SNAPSHOT.jar
