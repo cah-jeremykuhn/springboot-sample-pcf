@@ -6,6 +6,7 @@ applications:
   instances: 1
   host: samplepcfdeployment
   buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  command: java -jar samplepcfdeploy-0.0.1-SNAPSHOT.jar
   env:
    JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
    JBP_CONFIG_CONTAINER_CERTIFICATE_TRUST_STORE: '{enabled: true}'
