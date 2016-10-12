@@ -2,6 +2,7 @@
 
 set -e
 
-mvn -f source-code/pom.xml clean package spring-boot:repackage
+cd source-code
+mvn clean package spring-boot:repackage
 
-cp source-code/target/*.jar build-output/.
+cp target/samplepcfdeploy-*.jar ../build-output/.
