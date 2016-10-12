@@ -6,3 +6,4 @@ applications:
   instances: 1
   host: samplepcfdeployment
   buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  path: build-output/samplepcfdeploy-0.0.1-SNAPSHOT.jar
