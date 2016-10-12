@@ -1,7 +1,7 @@
 # springboot-sample-pcf
 To push to cloud foundry, do the following:
 
-* create a file called credentials.yml in the ci directory and add the following:
+* create a file called credentials.yml in the ci directory and add the following (replace the values with your CF credentials):
 ```yaml
 cf-api: <api url>
 cf-username: <username>
