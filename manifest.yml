@@ -13,4 +13,4 @@ applications:
    JBP_CONFIG_JAVA_MAIN: '{arguments: "-server.port=80"}'
    JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.8.0_101 }}'
    SPRING_PROFILES_ACTIVE: cloud
-  path: build-output/samplepcfdeploy-0.0.1-SNAPSHOT.jar
+  path: build-output
