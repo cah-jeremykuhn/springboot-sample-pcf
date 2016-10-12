@@ -26,4 +26,4 @@ jobs:
   - put: deploy-pcf
     params:
       manifest: source-code/manifest.yml
-      path: build-output
+      path: build-output/samplepcfdeploy-0.0.1-SNAPSHOT.jar
